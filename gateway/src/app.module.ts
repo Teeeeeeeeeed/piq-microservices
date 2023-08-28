@@ -4,7 +4,7 @@ import { AppService } from './app.service';
 import { ClientsModule, Transport } from '@nestjs/microservices';
 import { AuthModule } from './auth/auth.module';
 import { ItemsModule } from './items/items.module';
-import { RestaurantsModule } from './restaurants/restaurants.module';
+import { UserModule } from './user/user.module';
 import { RecommendationsModule } from './recommendations/recommendations.module';
 
 @Module({
@@ -26,7 +26,7 @@ import { RecommendationsModule } from './recommendations/recommendations.module'
       },
       {
         transport: Transport.TCP,
-        name: 'RESTAURANTS',
+        name: 'USER',
         options: {
           port: 3003,
         },
@@ -34,7 +34,7 @@ import { RecommendationsModule } from './recommendations/recommendations.module'
     ]),
     AuthModule,
     ItemsModule,
-    RestaurantsModule,
+    UserModule,
     RecommendationsModule,
   ],
   controllers: [AppController],

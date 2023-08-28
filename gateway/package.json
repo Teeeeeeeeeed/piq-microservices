@@ -21,9 +21,9 @@
     "proto:install": "npm i git+https://github.com/teeeeeeeeeed/grpc-nest-proto.git",
     "proto:auth": "protoc --plugin=node_modules/.bin/protoc-gen-ts_proto -I=./node_modules/grpc-nest-proto/proto --ts_proto_out=src/auth/ node_modules/grpc-nest-proto/proto/auth.proto --ts_proto_opt=nestJs=true --ts_proto_opt=fileSuffix=.pb",
     "proto:items": "protoc --plugin=node_modules/.bin/protoc-gen-ts_proto -I=./node_modules/grpc-nest-proto/proto --ts_proto_out=src/items/ node_modules/grpc-nest-proto/proto/items.proto --ts_proto_opt=nestJs=true --ts_proto_opt=fileSuffix=.pb",
-    "proto:restaurants": "protoc --plugin=node_modules/.bin/protoc-gen-ts_proto -I=./node_modules/grpc-nest-proto/proto --ts_proto_out=src/restaurants/ node_modules/grpc-nest-proto/proto/restaurants.proto --ts_proto_opt=nestJs=true --ts_proto_opt=fileSuffix=.pb",
+    "proto:user": "protoc --plugin=node_modules/.bin/protoc-gen-ts_proto -I=./node_modules/grpc-nest-proto/proto --ts_proto_out=src/user/ node_modules/grpc-nest-proto/proto/user.proto --ts_proto_opt=nestJs=true --ts_proto_opt=fileSuffix=.pb",
     "proto:recommendations": "protoc --plugin=node_modules/.bin/protoc-gen-ts_proto -I=./node_modules/grpc-nest-proto/proto --ts_proto_out=src/recommendations/ node_modules/grpc-nest-proto/proto/recommendations.proto --ts_proto_opt=nestJs=true --ts_proto_opt=fileSuffix=.pb",
-    "proto:all": "npm run proto:auth && npm run proto:items && npm run proto:restaurants && npm run proto:recommendations"
+    "proto:all": "npm run proto:auth && npm run proto:items && npm run proto:user && npm run proto:recommendations"
   },
   "dependencies": {
     "@grpc/grpc-js": "^1.9.1",
